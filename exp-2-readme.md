@@ -64,7 +64,7 @@ I_D \leq \frac{P}{V_{DD}} = \frac{1\,mW}{1.8\,V} = 555.6\,\mu A
 I_D = 200\,\mu A
 \]
 
-✔ Ensures safe operation within power limits and improves thermal reliability  
+ Ensures safe operation within power limits and improves thermal reliability  
 
 ---
 
@@ -82,7 +82,7 @@ Check:
 \frac{V_{DD}}{2} = 0.9V \geq 0.25V
 \]
 
-✔ Condition satisfied  
+ Condition satisfied  
 
 ---
 
@@ -148,11 +148,11 @@ V_B = V_{GS} + I_D R_S = 0.81V
 
 ---
 
-# ⚙️ 5. Circuit Configurations and Results
+# 5. Circuit Configurations and Results
 
 ---
 
-## 🔧 Configuration 1: CS Amplifier with Source Degeneration
+##  Configuration 1: CS Amplifier with Source Degeneration
 
 This configuration incorporates a source resistor to enhance **stability and linearity**, though at the expense of gain.
 
