@@ -192,7 +192,7 @@ A_v \approx 14.68 \, V/V \; (\approx 23.33\,dB)
 
 ---
 
-## 🔌 Configuration 3: CS Amplifier with Diode-Connected Load
+## Configuration 3: CS Amplifier with Diode-Connected Load
 
 In this configuration, the load MOSFET is diode-connected, resulting in a **low effective resistance**.
 
@@ -261,4 +261,4 @@ This experiment highlights the importance of **load selection in amplifier desig
 - Bandwidth is influenced by parasitic capacitances  
 - Trade-offs between gain, stability, and bandwidth must be carefully balanced  
 
-✔ The results validate theoretical expectations for CS amplifier behavior in **TSMC 180 nm CMOS technology**
+ The results validate theoretical expectations for CS amplifier behavior in **TSMC 180 nm CMOS technology**
