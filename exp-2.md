@@ -1,9 +1,9 @@
-# 🔬 Experiment 02  
+#  Experiment 02  
 ## Detailed Analysis of Common Source (CS) Amplifier Topologies
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 
 The objective of this experiment is to **design and analyze three Common Source (CS) amplifier configurations** using **TSMC 180 nm CMOS technology**.
 
@@ -21,7 +21,7 @@ Each configuration is evaluated based on:
 
 ---
 
-# 🔧 1. Configuration A: CS Amplifier with Source Degeneration (\(R_S\))
+#  1. Configuration A: CS Amplifier with Source Degeneration (\(R_S\))
 
 ## 1.1 Circuit Schematic
 
@@ -53,24 +53,24 @@ A_v = \frac{-g_m R_D}{1 + g_m R_S}
 
 ## 1.3 Simulation Results
 
-### 🔹 DC Analysis
+###  DC Analysis
 
 - \( V_{GS} \approx 0.7V \)  
 - \( V_{DS} \approx 0.9V \)  
 
-✔ Condition satisfied:
+ Condition satisfied:
 
 \[
 V_{DS} > V_{GS} - V_{TH}
 \]
 
-👉 Transistor operates in **saturation region**
+ Transistor operates in **saturation region**
 
 <img width="942" height="780" alt="DC ckt1" src="https://github.com/user-attachments/assets/ef8de1b5-6390-4282-bd10-40c29466f550" />
 
 ---
 
-### 🔹 Transient Analysis
+###  Transient Analysis
 
 - Input: \( 20\,mV_{pp} \)  
 - Output: \( 224.4\,mV_{pp} \)
@@ -79,13 +79,13 @@ V_{DS} > V_{GS} - V_{TH}
 A_v \approx 11.22 \, V/V
 \]
 
-✔ Output shows **clear amplification with phase inversion**
+ Output shows **clear amplification with phase inversion**
 
 <img width="1919" height="800" alt="transient ckt1" src="https://github.com/user-attachments/assets/f05944ac-3d1d-4c2d-b37e-a2cb30a65f97" />
 
 ---
 
-### 🔹 AC Analysis
+###  AC Analysis
 
 - 3 dB Bandwidth: **203.52 MHz**  
 - Unity Gain Bandwidth (UGB): **2.28 GHz**
@@ -94,7 +94,7 @@ A_v \approx 11.22 \, V/V
 
 ---
 
-# ⚡ 2. Configuration B: CS Amplifier with Active Load (PMOS)
+#  2. Configuration B: CS Amplifier with Active Load (PMOS)
 
 ## 2.1 Circuit Schematic
 
@@ -126,7 +126,7 @@ A_v = -g_m R_{out}
 
 ## 2.3 Simulation Results
 
-### 🔹 DC Analysis
+###  DC Analysis
 
 - Bias voltage adjusted to maintain:
 
@@ -134,13 +134,13 @@ A_v = -g_m R_{out}
 I_D \approx 200\,\mu A
 \]
 
-✔ Ensures proper operation in saturation
+ Ensures proper operation in saturation
 
 <img width="965" height="779" alt="DC op pnt ckt2" src="https://github.com/user-attachments/assets/d130ff49-0598-4c8a-ab37-319eb25d077f" />
 
 ---
 
-### 🔹 Transient Analysis
+###  Transient Analysis
 
 - Larger output swing due to high load resistance
 
@@ -148,23 +148,23 @@ I_D \approx 200\,\mu A
 A_v \approx 14.67 \, V/V
 \]
 
-✔ Higher gain than source degeneration case
+Higher gain than source degeneration case
 
 <img width="1915" height="806" alt="transient analysis ckt2" src="https://github.com/user-attachments/assets/0ccaca6d-5a65-4ca5-8a01-f4619592153d" />
 
 ---
 
-### 🔹 AC Analysis
+###  AC Analysis
 
 - 3 dB Bandwidth: **422.31 MHz**
 
-✔ Improved gain-bandwidth performance
+Improved gain-bandwidth performance
 
 <img width="1916" height="808" alt="AC Analysis ckt2" src="https://github.com/user-attachments/assets/b275a383-1744-4225-b64e-2889b1f5427d" />
 
 ---
 
-# 🔌 3. Configuration C: CS Amplifier with Diode-Connected Load
+#  3. Configuration C: CS Amplifier with Diode-Connected Load
 
 ## 3.1 Circuit Schematic
 
@@ -196,37 +196,37 @@ A_v = -g_m R_L
 
 ## 3.3 Simulation Results
 
-### 🔹 DC Analysis
+###  DC Analysis
 
-✔ Proper biasing ensures stable operation
+Proper biasing ensures stable operation
 
 <img width="953" height="785" alt="ckt3 DC" src="https://github.com/user-attachments/assets/160fa4be-6aac-461f-85d7-a20b2f89a76d" />
 
 ---
 
-### 🔹 Transient Analysis
+### Transient Analysis
 
 \[
 A_v \approx 4.13 \, V/V
 \]
 
-✔ Lower gain due to reduced output resistance
+Lower gain due to reduced output resistance
 
 <img width="1916" height="834" alt="transient analysis ckt3" src="https://github.com/user-attachments/assets/a5073c75-d8c5-41a2-8c64-15259836331a" />
 
 ---
 
-### 🔹 AC Analysis
+###  AC Analysis
 
 - 3 dB Bandwidth: **140.92 MHz**
 
-✔ Lower bandwidth due to loading effects
+ Lower bandwidth due to loading effects
 
 <img width="1914" height="835" alt="ckt3 AC" src="https://github.com/user-attachments/assets/c6576bb3-8dba-42a1-a0af-099f3954c782" />
 
 ---
 
-# 📊 Final Performance Comparison
+# Final Performance Comparison
 
 | Configuration | Gain (\(A_v\)) | 3 dB Bandwidth | UGB |
 |--------------|---------------|----------------|------|
@@ -236,7 +236,7 @@ A_v \approx 4.13 \, V/V
 
 ---
 
-# ✅ Conclusion
+#  Conclusion
 
 Among the three configurations:
 
@@ -246,7 +246,7 @@ Among the three configurations:
 
 ---
 
-# 📌 Inference
+#  Inference
 
 This experiment demonstrates how **different load configurations significantly affect amplifier performance**.
 
@@ -254,4 +254,4 @@ This experiment demonstrates how **different load configurations significantly a
 - Bandwidth depends on **parasitic capacitances and loading**
 - Trade-offs are essential in practical IC design
 
-✔ The results validate theoretical expectations for **CS amplifier topologies in 180 nm CMOS technology**
+The results validate theoretical expectations for **CS amplifier topologies in 180 nm CMOS technology**
