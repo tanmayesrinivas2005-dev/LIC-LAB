@@ -1,10 +1,10 @@
 Experiment 1
 PMOS Common Source Amplifier – Analysis using LTspice
-🔷 Overview
+Overview
 
 This experiment focuses on the design and analysis of a PMOS Common Source (CS) amplifier using LTspice. The study includes DC operating point verification, transient response, and AC frequency analysis to evaluate amplifier performance such as gain, bandwidth, and phase behavior.
 
-🎯 Objective
+ Objective
 Design a PMOS CS amplifier under given power constraints
 Ensure operation in the saturation region
 Evaluate:
@@ -12,20 +12,20 @@ Biasing conditions
 Voltage gain
 Frequency response
 Signal inversion
-🛠️ Tools & Technology
+ Tools & Technology
 Parameter	Value
 Simulation Tool	LTspice
 Technology Node	180 nm CMOS
 Supply Voltage	2 V
 Load Capacitance	1 pF
 Max Power	≤ 1.5 mW
-📖 Theory
-🔹 PMOS Common Source Amplifier
+ Theory
+ PMOS Common Source Amplifier
 Input is applied at the gate
 Output is taken from the drain
 Source is connected to VDD
 Output is inverted (180° phase shift)
-🔹 Conditions for Proper Operation
+ Conditions for Proper Operation
 
 To ensure correct amplification:
 
@@ -73,7 +73,7 @@ th
 	​
 
 Input must be small signal for linear operation
-🔹 Key Equations
+ Key Equations
 
 Drain Current:
 
@@ -169,8 +169,8 @@ R
 D
 	​
 
-⚙️ Design Calculations
-🔹 Power Constraint
+ Design Calculations
+ Power Constraint
 𝐼
 𝐷
 ≤
@@ -213,7 +213,7 @@ max
 
 =0.75mA
 
-✔ Selected:
+ Selected:
 
 𝐼
 𝐷
@@ -226,7 +226,7 @@ D
 	​
 
 =500μA
-🔹 Output Voltage (Midpoint Biasing)
+ Output Voltage (Midpoint Biasing)
 𝑉
 𝑜
 𝑢
@@ -252,7 +252,7 @@ DD
 	​
 
 =1V
-🔹 Drain Resistor
+ Drain Resistor
 𝑅
 𝐷
 =
@@ -292,7 +292,7 @@ out
 	​
 
 =2kΩ
-🔹 Process Parameter
+ Process Parameter
 𝐶
 𝑜
 𝑥
@@ -352,7 +352,7 @@ ox
 −4
 A/V
 2
-🔹 Transistor Width Calculation
+ Transistor Width Calculation
 𝑊
 =
 2
@@ -388,7 +388,7 @@ L
 Theoretical: 144 µm
 Practical (LTspice adjusted): 333.5 µm
 
-✔ Achieved:
+ Achieved:
 
 𝐼
 𝐷
@@ -401,7 +401,7 @@ D
 	​
 
 ≈500μA
-🔍 DC Analysis
+ DC Analysis
 
 DC simulation verifies correct biasing.
 
@@ -445,10 +445,10 @@ D
 	0.5 mA
 Power	1 mW
 
-✔ Transistor operates in saturation region
+ Transistor operates in saturation region
 
-📈 Transient Analysis
-🔹 Input Signal
+ Transient Analysis
+ Input Signal
 Frequency: 1 kHz
 𝑉
 𝑖
@@ -466,7 +466,7 @@ in(pp)
 	​
 
 ≈19.66mV
-🔹 Output Signal
+ Output Signal
 𝑉
 𝑜
 𝑢
@@ -484,7 +484,7 @@ out(pp)
 	​
 
 ≈209.37mV
-🔹 Voltage Gain
+ Voltage Gain
 𝐴
 𝑣
 =
@@ -530,7 +530,7 @@ out(pp)
 
 ≈10.64
 
-✔ Final Gain:
+ Final Gain:
 
 𝐴
 𝑣
@@ -543,10 +543,10 @@ v
 
 ≈−10.64
 
-➡ Negative sign indicates phase inversion
+ Negative sign indicates phase inversion
 
-📊 AC Analysis
-🔹 Gain in dB
+ AC Analysis
+ Gain in dB
 𝐴
 𝑣
 (
@@ -569,7 +569,7 @@ v
 	​
 
 (dB)=20log(10.64)≈20.54dB
-🔹 Bandwidth
+ Bandwidth
 Without load capacitor → Very high bandwidth
 With 
 𝐶
@@ -591,7 +591,7 @@ L
 𝐻
 𝑧
 BW≈473.54MHz
-🔹 Gain Bandwidth Product (GBP)
+ Gain Bandwidth Product (GBP)
 𝐺
 𝐵
 𝑃
@@ -622,7 +622,7 @@ v
 𝐻
 𝑧
 GBP≈10.64×473.54MHz≈4.85GHz
-🔹 Practical Observation
+ Practical Observation
 
 Simulated GBP differs slightly due to:
 
@@ -654,12 +654,12 @@ db
 Miller effect
 Finite output resistance
 Short-channel effects
-📌 Key Observations
+ Key Observations
 Proper DC biasing achieved
 Transistor remains in saturation region
 Output shows clear amplification and inversion
 Practical results closely match theoretical values
-✅ Conclusion
+ Conclusion
 
 The PMOS Common Source amplifier was successfully designed within the specified power limit.
 
@@ -669,7 +669,7 @@ Power Consumption ≈ 1 mW
 
 The results confirm correct amplifier operation while accounting for real-world non-ideal effects.
 
-🧠 Inference
+ Inference
 The circuit satisfies power and biasing constraints
 Gain and bandwidth are suitable for analog applications
 Minor deviations arise due to device-level parasitics
