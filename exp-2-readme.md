@@ -1,21 +1,21 @@
-# 🔬 Experiment 02  
+#  Experiment 02  
 ## Design and Characterization of Common Source (CS) Amplifier Topologies
 
 ---
 
-## 🎯 1. Problem Statement
+##  1. Problem Statement
 
 **Design Objective:**  
 Develop and analyze multiple **Common Source (CS) amplifier configurations** using **TSMC 180 nm CMOS technology** in **LTspice**.
 
-### 📌 Design Constraints
+### Design Constraints
 
 - **Maximum Power Dissipation:** \( P \leq 1\,mW \)  
 - **Supply Voltage:** \( V_{DD} = 1.8\,V \)  
 - **Load Capacitance:** \( C_L = 10\,pF \)  
 - **Channel Length:** \( L = 180\,nm \)
 
-### 🎯 Goal
+###  Goal
 
 To evaluate and compare amplifier performance using:
 
@@ -25,7 +25,7 @@ To evaluate and compare amplifier performance using:
 
 ---
 
-## 🧪 2. Aim
+##  2. Aim
 
 To design and examine three different CS amplifier configurations:
 
@@ -40,7 +40,7 @@ All circuits are designed to:
 
 ---
 
-## 🧰 3. Components Required
+##  3. Components Required
 
 - **Simulation Tool:** LTspice  
 - **Technology Library:** TSMC 180 nm CMOS  
@@ -50,15 +50,15 @@ All circuits are designed to:
 
 ---
 
-## 📐 4. Theoretical Design and Calculations
+##  4. Theoretical Design and Calculations
 
-### 🔹 4.1 Power and Current Constraints
+###  4.1 Power and Current Constraints
 
 \[
 I_D \leq \frac{P}{V_{DD}} = \frac{1\,mW}{1.8\,V} = 555.6\,\mu A
 \]
 
-👉 **Chosen Design Current:**
+ **Chosen Design Current:**
 
 \[
 I_D = 200\,\mu A
@@ -68,7 +68,7 @@ I_D = 200\,\mu A
 
 ---
 
-### 🔹 4.2 Biasing and Operating Point
+###  4.2 Biasing and Operating Point
 
 To ensure proper amplification:
 
@@ -86,7 +86,7 @@ Check:
 
 ---
 
-### 🔹 Gate Bias Voltage
+###  Gate Bias Voltage
 
 \[
 V_{GS} = V_{ov} + V_{TH} = 0.25 + 0.36 = 0.61V
@@ -94,7 +94,7 @@ V_{GS} = V_{ov} + V_{TH} = 0.25 + 0.36 = 0.61V
 
 ---
 
-### 🔹 NMOS Sizing
+###  NMOS Sizing
 
 Using:
 
@@ -102,7 +102,7 @@ Using:
 I_D = \frac{1}{2} \mu_n C_{ox} \frac{W}{L} V_{ov}^2
 \]
 
-👉 Calculated width:
+ Calculated width:
 
 \[
 W_n \approx 5\,\mu m
@@ -110,7 +110,7 @@ W_n \approx 5\,\mu m
 
 ---
 
-### 🔹 PMOS Sizing
+###  PMOS Sizing
 
 \[
 V_{SG} = |V_{THp}| + V_{ov} = 0.39 + 0.25 = 0.64V
@@ -120,7 +120,7 @@ V_{SG} = |V_{THp}| + V_{ov} = 0.39 + 0.25 = 0.64V
 V_G = V_{DD} - V_{SG} = 1.16V
 \]
 
-👉 Calculated width:
+ Calculated width:
 
 \[
 W_p \approx 11.8\,\mu m
@@ -128,7 +128,7 @@ W_p \approx 11.8\,\mu m
 
 ---
 
-### 🔹 4.3 Source Degeneration Resistor
+###  4.3 Source Degeneration Resistor
 
 To introduce feedback:
 
@@ -140,7 +140,7 @@ I_D R_S = 0.2V
 R_S = \frac{0.2}{200\mu A} = 1k\Omega
 \]
 
-👉 Updated gate bias:
+Updated gate bias:
 
 \[
 V_B = V_{GS} + I_D R_S = 0.81V
@@ -156,7 +156,7 @@ V_B = V_{GS} + I_D R_S = 0.81V
 
 This configuration incorporates a source resistor to enhance **stability and linearity**, though at the expense of gain.
 
-### 📊 Results
+###  Results
 
 - **Drain Current:** \( 199.1\,\mu A \)  
 - **Input:** \( 19.63\,mV_{pp} \)  
@@ -172,11 +172,11 @@ A_v \approx 11.22 \, V/V \; (\approx 21\,dB)
 
 ---
 
-## ⚡ Configuration 2: CS Amplifier with Active Load (PMOS)
+##  Configuration 2: CS Amplifier with Active Load (PMOS)
 
 Here, a PMOS transistor replaces the resistor, acting as a **high-resistance load**, significantly improving gain.
 
-### 📊 Results
+### Results
 
 - **Drain Current:** \( 199.3\,\mu A \)  
 - **Input:** \( 19.33\,mV_{pp} \)  
@@ -196,7 +196,7 @@ A_v \approx 14.68 \, V/V \; (\approx 23.33\,dB)
 
 In this configuration, the load MOSFET is diode-connected, resulting in a **low effective resistance**.
 
-### 📊 Results
+###  Results
 
 - **Drain Current:** \( 200.0\,\mu A \)  
 - **Input:** \( 19.46\,mV_{pp} \)  
@@ -212,7 +212,7 @@ A_v \approx 4.13 \, V/V \; (\approx 12.33\,dB)
 
 ---
 
-# 📊 6. Performance Comparison
+#  6. Performance Comparison
 
 | Metric | Source Degeneration | Active Load | Diode-Connected |
 |--------|-------------------|------------|----------------|
@@ -223,9 +223,9 @@ A_v \approx 4.13 \, V/V \; (\approx 12.33\,dB)
 
 ---
 
-# 📌 7. Discussion and Interpretation
+#  7. Discussion and Interpretation
 
-### 🔹 Performance Insights
+###  Performance Insights
 
 - The **Active Load configuration** achieves the highest gain due to increased output resistance.
 - The **Source Degenerated amplifier** provides better linearity and stability.
@@ -233,7 +233,7 @@ A_v \approx 4.13 \, V/V \; (\approx 12.33\,dB)
 
 ---
 
-### 🔹 Final Observations
+###  Final Observations
 
 - All designs successfully satisfy the power constraint:
 
@@ -245,7 +245,7 @@ P \approx 0.358\,mW < 1\,mW
 
 ---
 
-# ✅ 8. Conclusion
+#  8. Conclusion
 
 - The **Active Load CS amplifier** is best suited for high-gain and high-speed applications  
 - The **Source Degenerated amplifier** is ideal for linear and stable analog designs  
@@ -253,7 +253,7 @@ P \approx 0.358\,mW < 1\,mW
 
 ---
 
-# 📌 Inference
+# Inference
 
 This experiment highlights the importance of **load selection in amplifier design**.
 
